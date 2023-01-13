@@ -2,7 +2,7 @@ import './ListaSuspensa.css'
 import React from 'react'
 
 interface ListaSuspensaProps {
-    required: boolean
+    obrigatorio: boolean
     label: string
     valor: string
     itens: string[]
@@ -10,11 +10,11 @@ interface ListaSuspensaProps {
 
 }
 
-const ListaSuspensa = ({aoAlterado, itens, label, required, valor} :ListaSuspensaProps) => {
+const ListaSuspensa = ({aoAlterado, itens, label, obrigatorio, valor} :ListaSuspensaProps) => {
     return (
         <div className='lista-suspensa'>
             <label>{label}</label>
-            <select onChange={evento => aoAlterado(evento.target.value)} required={required} value={valor}>
+            <select onChange={evento => aoAlterado(evento.target.value)} required={obrigatorio} value={valor}>
                 <option value=""></option>
                 {itens.map(item => {
                     return <option key={item}>{item}</option>

@@ -4,14 +4,14 @@ import React from 'react'
 
 interface CampoTextoProps {
     aoAlterado: (valor: string) => void
-    obrigatorio: boolean
+    obrigatorio?: boolean
     label: string
     placeholder: string
     valor: string
 
 }
 
-const CampoTexto = ({obrigatorio, label, placeholder, valor , aoAlterado} :CampoTextoProps) => {
+const CampoTexto = ({obrigatorio = false, label, placeholder, valor , aoAlterado} :CampoTextoProps) => {
     const placeholderModificada = `${placeholder}...` 
 
     const aoDigitado = (evento: React.ChangeEvent<HTMLInputElement>) => {
