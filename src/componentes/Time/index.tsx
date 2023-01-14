@@ -28,7 +28,7 @@ const Time = ({colaboradores, corPrimaria, corSecundaria, nome} :TimeProps) => {
                      /> )}
             </div>
         </section> 
-        : ''
+        : <></>
     )
 }
 
